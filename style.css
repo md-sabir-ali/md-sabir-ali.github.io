@@ -31,45 +31,37 @@ body {
   padding: 40px;
 }
 
-/* ===== Header ===== */
+/* ===== Header (centered, Word-style) ===== */
 .header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
+  text-align: center;
   border-bottom: 3px solid var(--accent);
-  padding-bottom: 20px;
+  padding-bottom: 18px;
   margin-bottom: 24px;
 }
 
 .header h1 {
   font-size: 2.2rem;
-  color: var(--text);
+  color: var(--accent);
+  letter-spacing: 0.5px;
 }
 
 .header .role {
   font-size: 1.15rem;
-  color: var(--accent);
-  font-weight: 600;
-  margin-top: 2px;
+  color: var(--text);
+  font-weight: 700;
+  margin-top: 4px;
 }
 
 .header .tagline {
   color: var(--muted);
-  font-style: italic;
-  margin-top: 6px;
+  font-weight: 600;
+  margin-top: 4px;
 }
 
 .contact {
-  list-style: none;
+  margin-top: 10px;
   font-size: 0.9rem;
   color: var(--muted);
-  text-align: right;
-}
-
-.contact li {
-  margin-bottom: 4px;
-  white-space: nowrap;
 }
 
 .contact a {
@@ -134,17 +126,6 @@ body {
   margin-bottom: 6px;
 }
 
-/* Skill groups */
-.skill-group {
-  margin-bottom: 14px;
-}
-
-.skill-group h4 {
-  font-size: 0.9rem;
-  color: var(--text);
-  margin-bottom: 6px;
-}
-
 .item ul {
   padding-left: 20px;
 }
@@ -154,21 +135,26 @@ body {
   color: #374151;
 }
 
-/* ===== Skills ===== */
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+/* ===== Skills (two-column, Word-style) ===== */
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.skill {
-  background: #eff6ff;
-  color: var(--accent);
-  border: 1px solid #dbeafe;
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 0.88rem;
-  font-weight: 500;
+.skills-table td {
+  padding: 6px 0;
+  vertical-align: top;
+}
+
+.skills-table .skill-cat {
+  width: 210px;
+  font-weight: 700;
+  color: var(--text);
+  padding-right: 16px;
+}
+
+.skills-table .skill-list {
+  color: #374151;
 }
 
 /* ===== Certifications ===== */
@@ -196,14 +182,20 @@ body {
   .resume {
     padding: 24px;
   }
-  .header {
-    flex-direction: column;
-  }
-  .contact {
-    text-align: left;
-  }
   .header h1 {
     font-size: 1.8rem;
+  }
+  /* Stack skill category above its list on small screens */
+  .skills-table td {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+  .skills-table .skill-cat {
+    padding-top: 10px;
+  }
+  .skills-table .skill-list {
+    padding-bottom: 6px;
   }
 }
 

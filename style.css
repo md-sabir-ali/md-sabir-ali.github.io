@@ -125,6 +125,23 @@ body {
 .item .company {
   color: var(--accent);
   font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.item .client {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+/* Skill groups */
+.skill-group {
+  margin-bottom: 14px;
+}
+
+.skill-group h4 {
+  font-size: 0.9rem;
+  color: var(--text);
   margin-bottom: 6px;
 }
 
